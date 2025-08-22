@@ -1,34 +1,29 @@
-# CIFAR-100 Classification with ResNet-50
-This project, completed as a homework assignment for the Intelligent Data Processing course at the National Research University Higher School of Economics (HSE), demonstrates image classification on the CIFAR-100 dataset using a pretrained ResNet-50 model.
+# ResNet-50 on CIFAR-100
 
-## Overview
-- **Dataset:** CIFAR-100 for training and validation; SVHN for testing.
-- **Data Augmentation:** Random cropping, horizontal flipping, normalization.
-- **Model:** ResNet-50 pretrained on ImageNet, with the final fully connected layer adjusted for 100 classes.
-- **Training:** 15 epochs using Adam optimizer and cross-entropy loss.
-- **Evaluation:** Tracks training loss, training accuracy, and validation accuracy.
+This project was completed as a homework assignment for the course **Intelligent Data Processing** at the **National Research University Higher School of Economics (HSE)**. It demonstrates image classification on the **CIFAR-100 dataset** using a pretrained **ResNet-50** model.
+
+## Project Overview
+
+- **Dataset:** CIFAR-100, split into training (80%) and validation (20%) sets.
+- **Model:** Pretrained ResNet-50 with the final fully connected layer adapted to 100 classes.
+- **Loss Function:** CrossEntropyLoss.
+- **Optimizer:** Adam with learning rate 0.001.
+- **Training:** 15 epochs with standard data augmentation (random crop, horizontal flip) and normalization.
+- **Validation:** Accuracy and loss computed on the validation set.
 
 ## Results
-- **Training:**  
-  - Loss: ~1.27  
-  - Accuracy: ~62%
-- **Validation:**  
-  - Loss: ~1.13  
-  - Accuracy: ~66%
 
-## Tech Stack
-- PyTorch & torchvision
-- Torchvision datasets and transforms
-- GPU acceleration (CUDA if available)
+After training for 15 epochs, the model achieved:
 
-## Usage
-1. Install dependencies:
-```bash
-pip install torch torchvision matplotlib tqdm
-```
-2. Run the training script:
-```bash
-python train_cifar100.py
-```
-3. The script automatically downloads the datasets and pretrained model weights.
+- **Training Accuracy:** ~62.7%
+- **Validation Accuracy:** ~66.7%
+- **Validation Loss:** 1.128
+
+The training loss gradually decreases across epochs, demonstrating effective learning.
+
+## Notes
+
+- The project is implemented in PyTorch.
+- Uses `torchvision.transforms` for preprocessing and data augmentation.
+- Training is performed on GPU if available.
 
