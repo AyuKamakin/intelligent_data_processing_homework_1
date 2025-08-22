@@ -4,7 +4,8 @@ This project was completed as a homework assignment for the course **Intelligent
 
 ## Project Overview
 
-- **Dataset:** CIFAR-100, split into training (80%) and validation (20%) sets.
+- **Dataset:** CIFAR-100, split into training (80%) and validation (20%) sets.  
+  *Note: any mentions of the SVHN dataset in earlier code are artifacts and are not used in this project.*
 - **Model:** Pretrained ResNet-50 with the final fully connected layer adapted to 100 classes.
 - **Loss Function:** CrossEntropyLoss.
 - **Optimizer:** Adam with learning rate 0.001.
@@ -26,4 +27,3 @@ The training loss gradually decreases across epochs, demonstrating effective lea
 - The project is implemented in PyTorch.
 - Uses `torchvision.transforms` for preprocessing and data augmentation.
 - Training is performed on GPU if available.
-
